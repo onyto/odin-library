@@ -70,6 +70,11 @@ function displayBook() {
   createPara(`Author: ${book.author}`)
   createPara(`Pages: ${book.pages}`)
   createPara(`Read: ${book.read}`)
+
+  const removeBtn = document.createElement("button")
+  removeBtn.setAttribute("class", "removeBtn")
+  removeBtn.textContent = "Remove"
+  newCard.appendChild(removeBtn)
 }
 
 const showDialogBtn = document.getElementById("showDialog")
@@ -88,6 +93,6 @@ confirmBtn.addEventListener("click", (e) => {
   e.preventDefault()
   addBook()
   newBookDialog.close()
-  document.querySelector("form").reset()
+  // document.querySelector("form").reset()
   displayBook()
 })
