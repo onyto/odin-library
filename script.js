@@ -51,9 +51,9 @@ function displayBooks() {
   }
 }
 
+// Display the book that was last added to the array, on the webpage
 function displayBook() {
   let book = myLibrary[myLibrary.length - 1]
-  console.log(book)
 
   const container = document.querySelector(".container")
 
@@ -75,6 +75,10 @@ function displayBook() {
   removeBtn.setAttribute("class", "removeBtn")
   removeBtn.textContent = "Remove"
   newCard.appendChild(removeBtn)
+
+  removeBtn.addEventListener("click", () => {
+    container.removeChild(newCard)
+  })
 }
 
 const showDialogBtn = document.getElementById("showDialog")
