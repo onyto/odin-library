@@ -8,6 +8,13 @@ function Book(title, author, pages, read) {
   this.info = () => {
     return (`${title} by ${author}, ${pages} pages, read: ${read}`)
   }
+  this.changeRead = () => {
+    if (this.read === "yes") {
+      this.read = "no"
+    } else if (this.read === "no") {
+      this.read = "yes"
+    }
+  }
 }
 
 function addBook() {
@@ -83,6 +90,10 @@ function displayBook() {
   readCheckbox.setAttribute("type", "checkbox")
   if (book.read === "yes") readCheckbox.setAttribute("checked", "")
   readStatus.appendChild(readCheckbox)
+
+  readCheckbox.addEventListener("click", () => {
+    book.changeRead()
+  })
 
   const removeBtn = document.createElement("button")
   removeBtn.setAttribute("class", "removeBtn")
