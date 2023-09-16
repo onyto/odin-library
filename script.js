@@ -6,7 +6,7 @@ function Book(title, author, pages, read) {
   this.pages = pages
   this.read = read
   this.info = () => {
-    return (`${title} by ${author}, ${pages} pages, read: ${read}`)
+    return (`${this.title} by ${this.author}, ${this.pages} page(s), read: ${this.read}`)
   }
   this.changeRead = () => {
     if (this.read === "yes") {
