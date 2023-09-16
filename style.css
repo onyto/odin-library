@@ -35,3 +35,8 @@ form {
 .card {
   border: 1px solid black;
 }
+
+.readStatus {
+  display: flex;
+  gap: 5px;
+}

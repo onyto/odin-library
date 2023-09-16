@@ -69,7 +69,20 @@ function displayBook() {
   createPara(`Title: ${book.title}`)
   createPara(`Author: ${book.author}`)
   createPara(`Pages: ${book.pages}`)
-  createPara(`Read: ${book.read}`)
+
+  const readStatus = document.createElement("div")
+  readStatus.setAttribute("class", "readStatus")
+  newCard.appendChild(readStatus)
+
+  const readPara = document.createElement("p");
+  readPara.textContent = "Read: "
+  readStatus.appendChild(readPara)
+
+  const readCheckbox = document.createElement("input")
+  readCheckbox.setAttribute("class", "readCheckbox")
+  readCheckbox.setAttribute("type", "checkbox")
+  if (book.read === "yes") readCheckbox.setAttribute("checked", "")
+  readStatus.appendChild(readCheckbox)
 
   const removeBtn = document.createElement("button")
   removeBtn.setAttribute("class", "removeBtn")
