@@ -7,31 +7,33 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Odin-Library</h1>
-    <button id="showDialog">New Book</button>
-    <dialog id="newBookDialog">
-      <h2>Add a book</h2>
-      <form method="dialog">
-        <label for="title">Title: </label>
-        <input id="title" type="text"/>
-        <label for="author">Author: </label>
-        <input id="author" type="text"/>
-        <label for="pages">Pages: </label>
-        <input id="pages" type="number" min="0"/>
-        <fieldset>
-          <legend>Read?</legend>
-          <label for="read-yes">Yes</label>
-          <input id="read-yes" type="radio" name="read" value="yes"/>
-          <label for="read-no">No</label>
-          <input id="read-no" type="radio" name="read" value="no"/>
-        </fieldset>
-        <button id="confirmBtn" type="submit">OK</button>
-        <button id="cancelBtn" type="reset">Cancel</button>
-      </form>
-    </dialog>
-    <div class="container">
+    <div>
+      <h1>Odin-Library</h1>
+      <button id="showDialog">New Book</button>
+      <dialog id="newBookDialog">
+        <h2>Add a book</h2>
+        <form method="dialog">
+          <label for="title">Title: </label>
+          <input id="title" type="text"/>
+          <label for="author">Author: </label>
+          <input id="author" type="text"/>
+          <label for="pages">Pages: </label>
+          <input id="pages" type="number" min="0"/>
+          <fieldset>
+            <legend>Read?</legend>
+            <label for="read-yes">Yes</label>
+            <input id="read-yes" type="radio" name="read" value="yes"/>
+            <label for="read-no">No</label>
+            <input id="read-no" type="radio" name="read" value="no"/>
+          </fieldset>
+          <button id="confirmBtn" type="submit">OK</button>
+          <button id="cancelBtn" type="reset">Cancel</button>
+        </form>
+      </dialog>
+      <div class="container">
+      </div>
     </div>
-  
+
     <script src="script.js"></script>
   </body>
 </html>
